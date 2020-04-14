@@ -1,3 +1,6 @@
+print "Input a positive number: "
+x = gets.chomp.to_i
+
 $seq = []
 
 def hailstone(x)
@@ -9,7 +12,7 @@ def hailstone(x)
     hailstone ((x * 3) + 1)
   elsif x == 1
     $seq.push(x)
+    puts $seq.each { |x| print "#{x} " }
     puts "Number of steps: #{$seq.length}"
   end
-  $seq
 end

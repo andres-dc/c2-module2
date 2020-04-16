@@ -1,11 +1,15 @@
 def absolute_sum1 (a, b)
+  sum = a + b
+
   if (a + b < 0)
-    (a + b) * -1
+    sum * -1
   else
-    a + b
+    sum
   end
 end
 
 def absolute_sum2 (a, b)
-  a + b < 0 ? (a + b) * -1 : a + b
+  sum = a + b
+
+  a + b < 0 ? sum * -1 : sum
 end

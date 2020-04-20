@@ -1,9 +1,10 @@
 def put_n(str, t)
-  !(t.is_a? Integer and t >= 1) ?
-    raise ArgumentError.new("Fail") :
-    t.times { puts str }
+  raise ArgumentError.new("Number is negative") if !(t >= 1)
+  raise ArgumentError.new("Number is not an integer") if !(t.is_a? Integer)
+    
+  t.times { puts str }
 end
 
 put_n("This will be printed 5 times!", 5)
-put_n("This will be printed 5 times!", 3.5)
 put_n("This will be printed 5 times!", -2)
+put_n("This will be printed 5 times!", 3.5)

@@ -25,11 +25,9 @@ end
 
 def str_to_hash(str)
   # convert to array of strings
-  str = str
-        .split(/[\n]/)[1..-1]
-        .map { |el| el.split(', ') }
+  str = str.split(/[\n]/)[1..-1].map { |el| el.split(', ') }
 
-  # convert to booleans position [2] of each sub-array
+  # convert position [2] of each sub-array to booleans
   str = str.each { |el| el[2] = to_bool(el[2]) }
 
   # separate position [1] of each sub-array
@@ -55,9 +53,7 @@ end
 def inventory_price(arr)
   total = 0
 
-  arr.each do |el|
-    total += (el[:amount] * exchange(el[:symbol], el[:price]))
-  end
+  arr.each { |el| total += (el[:amount] * exchange(el[:symbol], el[:price])) }
 
   '%.2f' % total
 end

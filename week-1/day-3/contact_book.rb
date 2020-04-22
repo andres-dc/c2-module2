@@ -6,6 +6,10 @@ contacts = {
   Lemieux: 66
 }
 
+def print_info(contacts)
+  contacts.each { |k, v| puts "Name: #{k} - Number: #{v}" }
+end
+
 puts 'What would you like to do?'
 puts "-- Type 'add' or 'a' to add a contact."
 puts "-- Type 'update' or 'u' to update a contact."
@@ -42,9 +46,7 @@ when 'update' && 'u'
   end
 
 when 'display' && 'd'
-  contacts.each do |name, number|
-    puts "Name: #{name} - Number: #{number}"
-  end
+  print_info(contacts)
 
 when 'delete' && 'del'
   puts 'Contact name: '
@@ -55,8 +57,6 @@ when 'delete' && 'del'
   else
     contacts.delete(name.to_sym)
 
-    contacts.each do |name, number|
-      puts "Name: #{name} - Number: #{number}"
-    end
+    print_info(contacts)
   end
 end

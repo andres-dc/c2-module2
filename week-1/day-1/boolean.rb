@@ -1,7 +1,5 @@
-def bool_to_word bool
-  if (bool == true)
-    'Yes'
-  elsif (bool == false)
-    'No'
-  end
+# frozen_string_literal: true
+
+def bool_to_word(bool)
+  bool ? 'Yes' : 'No'
 end

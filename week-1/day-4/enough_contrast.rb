@@ -13,11 +13,11 @@ class Color
   end
 
   def brightness_difference(second_clr)
-    brightness_index - second_clr.brightness_index
+    (brightness_index - second_clr.brightness_index).abs
   end
 
   def hue_difference(second_clr)
-    ((r - second_clr.r) + (g - second_clr.g) + (b - second_clr.b)).abs
+    ((r - second_clr.r).abs + (g - second_clr.g).abs + (b - second_clr.b).abs)
   end
 
   def enough_contrast?(second_clr)

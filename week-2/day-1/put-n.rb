@@ -1,7 +1,7 @@
 def put_n(str, t)
-  raise ArgumentError.new("Number is negative") if t <= 0
-  raise ArgumentError.new("Number is not an integer") if !(t.is_a? Integer)
-    
+  raise ArgumentError, "Number is negative" if t <= 0
+  raise ArgumentError, "Number is not an integer" if !(t.is_a? Integer)
+
   t.times { puts str }
 end
 

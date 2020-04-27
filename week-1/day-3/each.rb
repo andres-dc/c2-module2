@@ -1,5 +1,5 @@
 def each(arr)
-  p arr.length.times { |i| yield arr[i] }
+  arr.length.times { |i| yield arr[i] }
 end
 
 test_array = [2, 3, 4, 5]

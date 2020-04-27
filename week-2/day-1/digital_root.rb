@@ -4,4 +4,4 @@ def digital_root(num)
 end
 
 p digital_root(16) # 7
-p digital_root(456) # 6 
+p digital_root(456) # 6
